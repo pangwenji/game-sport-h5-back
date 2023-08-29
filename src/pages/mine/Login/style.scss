@@ -1,0 +1,24 @@
+
+.input-name {
+    width: 360px;
+    height: 60px;
+    font-size: 30px;
+    border: 1px solid grey;
+}
+
+.login-container {
+    margin-top: 60px;
+
+    .login-submit {
+        width: 250px;
+        height: 60px;
+        color: white;
+        background-color: #1b1b1b;
+        border-radius: 10px;
+    }
+
+    .label-title {
+        margin-right: 10px;
+        font-size: 30px;
+    }
+}

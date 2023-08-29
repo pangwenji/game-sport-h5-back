@@ -1,0 +1,26 @@
+@mixin circle() {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-main {
+    .data_tab {
+        width: 100%;
+        height: 75px;
+        background: white;
+        margin-top: 10px;
+        @include circle()
+    }
+
+
+
+
+}

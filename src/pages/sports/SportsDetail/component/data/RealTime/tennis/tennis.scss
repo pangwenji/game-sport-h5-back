@@ -1,0 +1,88 @@
+.tennis {
+    margin-top: 12px;
+}
+
+.panel {
+    height: 250px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .top {
+        flex: 3;
+        display: flex;
+        border-bottom: 1px solid #f0f0f0;
+
+        .left {
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+
+            .slot {
+                flex: 1;
+            }
+
+            .name-top {
+                flex: 1;
+                font-size: 25px;
+            }
+
+            .name-right {
+                font-size: 25px;
+                flex: 1;
+                color: #F7B500;
+            }
+        }
+
+        .right {
+            flex: 2;
+            display: flex;
+
+            .item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                }
+
+                .name {
+                    color: #888888
+                }
+            }
+
+        }
+    }
+
+    .bottom {
+        flex: 2;
+        display: flex;
+        font-size: 27px;
+        color: #888888;
+        font-weight: bold;
+
+        .left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+    }
+}

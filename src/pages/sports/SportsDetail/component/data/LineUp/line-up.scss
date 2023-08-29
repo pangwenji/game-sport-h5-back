@@ -1,0 +1,440 @@
+@mixin common() {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+@mixin avatar() {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin commonList() {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+@mixin header() {
+    height: 120px;
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    .up {
+        flex: 1;
+        position: relative;
+
+        .title {
+            width: 150px;
+            height: 60px;
+            color: #ffffff;
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -80%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.line-up {
+    height: 750px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .array {
+        width: 100%;
+        height: 1200px;
+        background-image: url('https://m.bebo5555.com/spa/sport-h5/img/frame.2cee2a92.png');
+        background-size: cover;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .array-middle {
+            flex: 1;
+
+            div {
+                height: 120px;
+                background: red;
+            }
+        }
+
+        .array-top {
+            flex: 4;
+
+            .main-first {
+                @include common();
+                top: 130px;
+            }
+
+            .main-title {
+                background: linear-gradient(89.81deg, rgba(168, 255, 177, 0.6) 1.46%, rgba(90, 207, 102, 0) 99.84%);
+                border-radius: 1.04rem;
+                height: 60px;
+                position: absolute;
+                left: 18px;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                width: 200px;
+            }
+
+            .main-second {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                top: 230px;
+            }
+
+            .main-third {
+                @include common();
+                top: 330px;
+            }
+
+            .main-four {
+                @include common();
+                top: 430px;
+            }
+
+            .main-goalkeeper {
+                @include common();
+                top: 19px;
+            }
+
+            .passenger-title {
+                background: linear-gradient(89.81deg, rgba(168, 255, 177, 0.6) 1.46%, rgba(90, 207, 102, 0) 99.84%);
+                border-radius: 1.04rem;
+                height: 60px;
+                position: absolute;
+                left: 18px;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                width: 200px;
+            }
+
+            .passenger-third {
+                @include common();
+                bottom: 370px;
+            }
+
+            .passenger-goalkeeper {
+                @include common();
+                bottom: 0;
+
+            }
+
+            .passenger-first {
+                @include common();
+                bottom: 140px;
+            }
+
+            .passenger-second {
+                @include common();
+                bottom: 250px;
+            }
+        }
+
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 126px;
+        height: 110px;
+        margin-left: 12px;
+        margin-right: 12px;
+
+        .top {
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            p {
+                width: 40px;
+                height: 32px;
+                background: #10532e;
+                font-size: 10px;
+                color: #ffffff;
+                border-radius: 0.106667rem 0 0 0.106667rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 15px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .avatar {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                right: 28px;
+            }
+        }
+
+        .bottom {
+            flex: 1;
+
+
+            .name {
+                width: 100%;
+                height: 100%;
+                color: #ffffff;
+                text-align: center;
+                text-overflow: ellipsis; //溢出用省略号显示
+            }
+        }
+    }
+
+    .formation {
+        height: 180px;
+        display: flex;
+
+        .formation-middle {
+            flex: 1;
+        }
+
+        .formation-box {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            span {
+                font-size: 30px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 200px;
+                overflow: hidden;
+                height: 45px;
+                text-align: end;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .substituteLineup-header {
+        @include header();
+        margin-top: 30px;
+        position: relative;
+        height: 60px;
+
+        .up {
+            .title {
+                background-color: black;
+
+                color: #ffffff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
+        }
+
+    }
+
+    .injuryAndIllness-header {
+        @include header();
+        margin-top: 30px;
+        position: relative;
+        height: 60px;
+
+        .up {
+            .title {
+                background-color: orange;
+
+                color: #ffffff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
+        }
+    }
+
+    .firstRoundPlasticSurgery-header {
+        @include header();
+
+        .up {
+            .title {
+                background: linear-gradient(180deg, #0c176d 0%, #1736a1 100%);
+            }
+        }
+
+        .down {
+            flex: 2;
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            .left {
+                width: 200px;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                left: 16px;
+
+                .left-name {
+                    width: 130px;
+                    background: #E20B0B;
+                    height: 50px;
+                    color: #ffffff;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    text-align: center;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                .left-score {
+                    width: 130px;
+                    height: 50px;
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    background: #f7f7f7;
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                }
+            }
+
+            .right {
+                position: absolute;
+                right: 16px;
+                width: 200px;
+                display: flex;
+                align-items: center;
+
+                .right-name {
+                    width: 130px;
+                    background: #2B44B1;
+                    height: 50px;
+                    color: #ffffff;
+                    border-bottom-right-radius: 30px;
+                    border-top-right-radius: 30px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .right-score {
+                    width: 130px;
+                    height: 50px;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    background: #f7f7f7;
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+
+
+    .list {
+        height: 120px;
+        width: 100%;
+        background: #ffffff;
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .list-left {
+
+            @include commonList();
+
+            .avatar {
+
+                @include avatar();
+                border: 1px solid #E20B0B;
+            }
+
+            .score {
+                color: #E20B0B;
+                font-weight: bold;
+                font-size: 35px;
+                border-right: 1px solid #f0f0f0;
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-right: 10px;
+            }
+
+            .name {
+                font-size: 25px;
+            }
+        }
+
+        .list-right {
+
+            @include commonList();
+            justify-content: flex-end;
+
+            .avatar {
+
+                @include avatar();
+                border: 1px solid #2B44B1;
+            }
+
+            .score {
+                color: #2B44B1;
+                font-weight: bold;
+                font-size: 35px;
+                border-right: 1px solid #f0f0f0;
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-right: 10px;
+            }
+
+            .name {
+                font-size: 30px;
+                text-align: end;
+                width: 200px;
+                font-size: 25px;
+            }
+        }
+    }
+}

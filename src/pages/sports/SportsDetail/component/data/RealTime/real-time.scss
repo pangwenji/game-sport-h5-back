@@ -1,0 +1,332 @@
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.real-time {
+    width: 100%;
+    // height: 500px;
+    // overflow-y: scroll;
+
+    .panel-info {
+        height: 280px;
+        width: 100%;
+        background: #ffffff;
+        margin-top: 15px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        .top {
+            border-bottom: 1px solid #f0f0f0;
+
+            .left {
+                flex: 2;
+                // background: orange;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                span {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center
+                }
+
+                .master {
+                    color: #000000;
+                }
+
+                .ke {
+                    color: #F7b500
+                }
+
+            }
+
+            .right {
+                flex: 3;
+                // background: blue;
+                display: flex;
+
+                div {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+
+                    .schedule {
+                        width: 100%;
+                        height: 100%;
+                        flex: 1;
+                        @include center();
+                        color: #888888;
+                    }
+
+                    .text {
+                        flex: 1;
+                        @include center();
+                        color: #000000;
+                        font-weight: bold;
+                    }
+
+                    .total {
+                        flex: 1;
+                        @include center();
+                        color: #F7b500;
+                        font-weight: bold;
+                    }
+
+                }
+            }
+
+            display: flex;
+            flex: 3;
+        }
+
+        .bottom {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .box {
+
+                height: 80px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .up {
+                    flex: 1;
+                    text-align: center;
+                }
+
+                .down {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+
+                    justify-content: center;
+
+                    .line-eChar {
+                        width: 140px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    span {
+                        color: #000000;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                }
+
+                // background: red;
+            }
+
+        }
+    }
+
+    .realTime-empty {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .border-line-bottom {
+        display: flex;
+        height: 80px;
+        background-color: white;
+        align-items: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding-left: 10px;
+
+        span {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+    .box {
+        height: 180px;
+        width: 100%;
+        display: flex;
+
+        .box-left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-right {
+            flex: 6;
+            display: flex;
+            flex-direction: column;
+
+            .top {
+                flex: 1;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                span {
+                    color: #888888;
+                }
+            }
+
+            .bottom {
+                flex: 2;
+            }
+        }
+    }
+}
+
+@mixin teamInformation() {
+    width: 120px;
+    height: 50px;
+    color: #ffffff;
+    display: flex;
+    font-size: 26px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.team {
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    margin-top: 12px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.team-info {
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .left {
+
+        background: #E20b0b;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        @include teamInformation();
+    }
+
+    .right {
+        position: absolute;
+        right: 0;
+        @include teamInformation();
+        background: #2B44b1;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+}
+
+.team-score {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #ffffff;
+
+    .top {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        span {
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .home {
+            flex: 1;
+
+        }
+
+        .name {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        .away {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    .bottom {
+        flex: 1;
+        display: flex;
+
+        .right-box {
+            flex: 1;
+            height: 100%;
+            transform: rotateY(180deg);
+
+            .bar-char {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                height: 15px;
+            }
+        }
+
+        .bottom-box {
+            flex: 1;
+            height: 100%;
+            position: relative;
+
+            .bar-char {
+                width: 100%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                height: 15px;
+            }
+
+
+
+            .right-bar-char {
+                // position: absolute;
+                // right: 0;
+                transform: rotateY(180deg);
+
+                // canvas {
+                //     width: 300 !important;
+                // }
+            }
+        }
+
+    }
+}

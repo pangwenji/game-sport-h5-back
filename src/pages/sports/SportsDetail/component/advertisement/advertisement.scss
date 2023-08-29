@@ -1,0 +1,227 @@
+@mixin text() {
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 34px;
+}
+
+@mixin card() {
+    height: 35px;
+    width: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.statement {
+    width: 500px;
+}
+
+.context {
+    width: 100%;
+    height: 460px;
+    background-size: 100% 100%;
+    // background-image: url('../../../../../assets/images/sports/svg/marchDetail.svg');
+    background-image: url('https://m.bebo5555.com/spa/sport-h5/img/head-bg-2.6d1681b2.png');
+
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+
+
+    .team-row {
+        display: flex;
+        align-items: center;
+        flex: 2;
+        justify-content: center;
+
+        .team-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 2.5;
+            @include text();
+
+        }
+
+        .team-middle {
+            flex: 1;
+
+            .vs-text {
+                font-size: 30px;
+                color: #ffd7a2;
+                font-weight: 900;
+
+            }
+        }
+
+        .team-right {
+            flex: 2.5;
+            display: flex;
+            align-items: center;
+            @include text()
+        }
+    }
+
+    .race-score {
+        flex: 2.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-size: 100px;
+            font-family: DIN Alternate;
+            font-weight: bold;
+            color: #ffffff;
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .square {
+            // width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            flex-direction: column;
+
+            .square-box {
+                flex: 1;
+
+                .mark-red {
+                    background: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 15px;
+                    height: 40px;
+                    width: 180px;
+                    text-align: center;
+
+                    color: #ffffff;
+                    font-weight: bold;
+                }
+
+                .competition {
+                    font-size: 15px;
+                    height: 76%;
+                    width: 180px;
+                    background: linear-gradient(270deg, rgba(65, 84, 108, 0) 0%, #41546c 48.12%, rgba(65, 84, 108, 0) 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+
+            .neValue {
+                display: flex;
+                // flex: 1;
+                font-size: 12px;
+                align-items: center;
+                width: 100px;
+                height: 35px;
+
+                .N {
+                    height: 28px;
+                    width: 18px;
+                    background: green;
+                    color: #ffffff;
+
+                }
+            }
+
+        }
+    }
+
+    .team-bottom {
+        flex: 1.5;
+        display: flex;
+
+        .box {
+            width: 180px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .box-content-left {
+                position: absolute;
+                right: 0;
+                width: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 12px;
+                // background: red;
+            }
+
+            .box-content {
+                width: 110px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .media {
+                    display: flex;
+                    align-items: center;
+                }
+
+                span {
+                    color: #ffffff;
+                    font-size: 19px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.team-name {
+    display: flex;
+    flex-direction: column;
+    height: 88px;
+    width: 100%;
+    // background: red;
+
+    .team-name-left {
+        width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 25px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+    }
+
+    .card-panel {
+        flex: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .yellow-card {
+            @include card();
+            background: orange;
+        }
+
+        .red-card {
+            @include card();
+            background: red;
+        }
+    }
+}

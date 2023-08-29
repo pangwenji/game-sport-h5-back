@@ -1,0 +1,36 @@
+.money-level {
+    display: flex;
+    height: 80px;
+    background: #ffffff;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 12px;
+    top: 170px;
+    position: absolute;
+
+    span {
+        color: #8A8A8D;
+        font-size: 20px;
+    }
+}
+
+.notice {
+    // height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    // background: blue;
+}
+
+.data-empty {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.scroll {
+    top: 240px;
+    background: #f0f0f0;
+}

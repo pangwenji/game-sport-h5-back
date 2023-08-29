@@ -1,0 +1,111 @@
+.van-index-bar-sidebar {
+	position: fixed;
+	top: 50%;
+	right: 20.8px;
+	z-index: 1003;
+	display: flex;
+	flex-flow: column wrap-reverse;
+	justify-content: center;
+	height: 560px;
+	color: #8a8a8d;
+	text-align: center;
+	user-select: none;
+
+	.van-index-bar-index {
+		box-sizing: border-box;
+		width: 46px;
+		height: 46px;
+		padding: 8px 10.4px;
+		font-size: 25.6px;
+		font-weight: 500;
+		line-height: 29.6px;
+		color: #8a8a8d;
+		text-align: center;
+		cursor: pointer;
+
+		&.van-index-bar-index-active {
+			position: relative;
+			color: #fff;
+			background-color: #2b44b1;
+			border-radius: 50%;
+
+			
+		}
+	}
+}
+
+.champion-list {
+	.index-bar-title {
+		margin: 25.6px;
+		font-size: 29.6px;
+		line-height: 42px;
+		color: #000;
+		text-align: left;
+	}
+
+	.main-match-list-champion {
+		overflow: auto;
+	}
+
+	.match-list-card {
+		position: relative;
+		box-sizing: border-box;
+		height: calc(100vh - 784px);
+		padding-bottom: 380px;
+		overflow: auto;
+		scroll-behavior: smooth;
+		transition-duration: 700ms;
+
+		.card-index-anchor {
+			position: relative;
+			z-index: 1;
+			box-sizing: border-box;
+			padding: 0 33.6px;
+			font-size: 29.6px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 42px;
+			color: #000;
+			text-align: left;
+			text-transform: uppercase;
+			background-color: transparent;
+		}
+
+		.league {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			height: 0.96rem;
+			padding: 0 25.6px;
+			margin-bottom: 8px;
+			background: #fff;
+			border-radius: 42px;
+
+			.league-icon {
+				width: 59px;
+				height: 59px;
+				overflow: hidden;
+				border-radius: 50%;
+
+				img {
+					width: 59px;
+					height: 59px;
+				}
+			}
+
+			.league-name {
+				box-sizing: border-box;
+				padding: 0.24rem 25.6px;
+				overflow: hidden;
+				font-size: 29.6px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 42px;
+				color: #1f2022;
+				text-align: left;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+}

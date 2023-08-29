@@ -1,0 +1,89 @@
+@mixin commonSpan {
+    width: 170px;
+    height: 65%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.sport {
+    background: white;
+
+
+    .sport-header {
+        height: 80px;
+        background-color: #ffffff;
+        display: flex;
+        position: sticky;
+
+        top: 30px;
+        left: 0;
+
+        div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .span-active {
+                background: #2B44B1;
+                @include commonSpan();
+            }
+
+            .span-inactive {
+                @include commonSpan();
+                background: #f0f0f0;
+                color: #888888
+            }
+        }
+
+    }
+
+
+
+
+}
+
+@mixin commonDate() {
+    width: 220px;
+    height: 80%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    &.middle {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    margin-bottom: 10px;
+}
+
+.data-empty {}
+
+.sorter-date {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    height: 80px;
+    justify-content: center;
+
+    .date-active {
+        @include commonDate();
+        background: #2B44B1;
+
+    }
+
+    .date-inactive {
+        @include commonDate();
+        background: #f7f7f7;
+        color: #2B44B1;
+
+    }
+
+}

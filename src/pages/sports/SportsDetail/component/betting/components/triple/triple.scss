@@ -1,0 +1,58 @@
+@use '../../bettings.scss';
+
+.box {
+    height: 100%;
+    width: 100%;
+
+    .title {
+        width: 100%;
+        height: 80px;
+        display: flex;
+
+        span {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #000000;
+            font-weight: 500;
+        }
+    }
+
+    .content {
+        flex: 4;
+        width: 100%;
+        display: flex;
+        height: auto;
+        position: relative;
+
+        .content-box {
+            // flex: 1;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 230px;
+            height: auto;
+
+        }
+
+        // .content-box-middle {
+        //     display: flex;
+        //     flex-direction: column;
+
+        //     width: 230px;
+        //     height: auto;
+        // }
+
+        // .content-box-right {
+        //     display: flex;
+        //     flex-direction: column;
+        //     // position: relative;
+        //     // position: absolute;
+
+        //     width: 230px;
+        // }
+
+    }
+}

@@ -1,0 +1,314 @@
+.navigation-wrapper {
+	position: relative;
+}
+
+
+.top-banner {
+	position: relative;
+	height: 470px;
+	background: url('https://m.bebo5555.com/spa/sport-h5/img/bg-mini.25ab1963.jpg') center bottom no-repeat;
+	background-size: cover;
+
+	.notice {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		font-size: 0.26rem;
+		color: #bbb;
+
+		.tip-title {
+			flex: 1;
+			height: 28px;
+		}
+
+	}
+
+	.sport-head {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 16px 10px;
+		color: #fff;
+
+		.money-top {
+			display: flex;
+			align-items: center;
+			margin-right: 20px;
+			margin-left: auto;
+
+			.coins {
+				.title-bi-item {
+					position: relative;
+					display: flex;
+					align-items: center;
+					margin-right: 5px;
+					font-weight: 700;
+
+					.wallet-icon {
+						width: 36px;
+						height: 36px;
+						margin-right: 10px;
+					}
+
+					.balance-number {
+						margin-right: 10px;
+						font-size: 32px;
+					}
+
+					.wallet-refresh {
+						width: 24px;
+						height: 24px;
+						margin-right: 10px;
+					}
+				}
+			}
+
+			.btn-main {
+				height: 40px;
+				padding: 0 20.8px;
+				margin-left: 8px;
+				font-size: 28px;
+				line-height: 40px;
+				color: #883d00;
+				background: linear-gradient(180deg, #ffe2b5 0%, #ffb77c 100%);
+				border: none;
+				border-radius: 25.6px;
+			}
+		}
+
+		.kefu-icon {
+			img {
+				width: 56px;
+				height: 56px;
+			}
+		}
+	}
+}
+
+.top-match {
+	display: flex;
+	justify-content: center;
+	height: 300px;
+	cursor: pointer;
+
+	.content-slider-content {
+		padding-bottom: 10px;
+		margin: 0 10px;
+
+		.match-detail {
+			.team-banner {
+				position: relative;
+				width: 250px;
+
+				.top {
+					display: flex;
+					align-items: center;
+					height: 110px;
+
+					&.home {
+						justify-content: end;
+						padding-right: 100px;
+					}
+
+					&.away {
+						justify-content: start;
+						padding-left: 100px;
+					}
+
+					.team-wrapper {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						max-width: 76.8px;
+						height: 123px;
+
+						.team-logo {
+							width: 72px;
+							height: 72px;
+							margin-bottom: 10px;
+						}
+
+						.team-name {
+							width: 240px;
+							overflow: hidden;
+							font-size: 25.6px;
+							font-style: normal;
+							font-weight: 600;
+							color: #fff;
+							text-align: center;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+
+			.time-score {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				justify-content: center;
+				width: 221px;
+			}
+
+			.time-content {
+				display: -webkit-box;
+				display: flexbox;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 8px;
+
+				.living-icon {
+					width: 42px;
+					height: 29.6px;
+					background: linear-gradient(97.46deg, #ff835b 8.17%, #fc2719 94.97%);
+					border-radius: 42px;
+				}
+
+				.anchor-status {
+					width: 42px;
+					height: 29.6px;
+					margin-right: 8px;
+
+					img {
+						width: 42px;
+						height: 29.6px;
+					}
+				}
+			}
+
+			.match-time {
+				padding: 0 10.4px;
+				font-size: 20.8px;
+				line-height: 33.6px;
+				color: #fff;
+				white-space: nowrap;
+				border-radius: 16.8px;
+
+				&.in-play {
+					top: 110px;
+					left: calc(50% - 180px / 2);
+					height: 29.6px;
+					font-size: 20.8px;
+					font-weight: 400;
+					line-height: 29.6px;
+					background: #e20b0b;
+					opacity: 0.9;
+				}
+
+				.match-time-left {
+					position: absolute;
+				}
+			}
+
+			.score {
+				span {
+					font-size: 51px;
+					line-height: 61.6px;
+				}
+
+				.active {
+					color: #ffd7a2;
+				}
+			}
+
+			.vs {
+				margin: 20px 0;
+				font-size: 51px;
+				font-weight: bold;
+				line-height: 61.6px;
+				color: #fff;
+				text-align: center;
+				letter-spacing: 0.64px;
+			}
+
+			.details,
+			.corner,
+			.half {
+				display: flex;
+				align-items: center;
+				line-height: 32px;
+			}
+
+			.details {
+				margin-top: 10.4px;
+
+				.icon {
+					width: 29.6px;
+					height: 29.6px;
+					transform: translateY(-2px);
+				}
+			}
+
+			.corner {
+				margin-right: 25.6px;
+			}
+
+			/* stylelint-disable-next-line no-descending-specificity */
+			span {
+				font-size: 25.6px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 29.6px;
+				color: #bbb;
+			}
+		}
+	}
+
+	.league {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: -4px;
+
+		.league-name {
+			width: 296px;
+			margin-bottom: 8px;
+			overflow: hidden;
+			font-size: 25.6px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 36px;
+			color: #fff;
+			text-align: center;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.league-logo {
+			width: 42px;
+			height: 42px;
+			margin-right: 8px;
+		}
+	}
+}
+
+.custom-indicator {
+	position: absolute;
+	bottom: 34px;
+	left: 50%;
+	display: flex;
+	padding: 4px 8px;
+	user-select: none;
+	border-radius: 4px;
+	transform: translate(-50%, 0);
+}
+
+.swiper-pagination-bullet {
+	width: 25.6px;
+	height: 8px;
+	margin: 0 8px;
+	margin-bottom: 20px !important;
+	cursor: pointer;
+	background: rgb(255 255 255 / 10%);
+	border: none;
+	border-radius: 42px;
+	opacity: 1;
+
+	&.active {
+		width: 56.2px;
+		background: rgb(255 255 255 / 60%);
+	}
+}

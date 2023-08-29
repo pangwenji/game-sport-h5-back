@@ -1,0 +1,43 @@
+{
+	"title": "Welcome to react using react-i18next fully type-safe",
+	"description": {
+		"part1": "This is a simple example.",
+		"part2": "😉"
+	},
+	"period": {
+		"SoccerRealTime": "Thời gian thực bóng đá",
+		"SoccerFullTime": "Toàn trận bóng đá",
+		"SoccerFistHalf": "Hiệp một bóng đá",
+		"SoccerSecondHalf": "Hiệp hai bóng đá",
+		"SoccerExtraFirstHalf": "Hiệp một bóng đá phụ",
+		"SoccerExtraSecondHalf": "Hiệp hai bóng đá phụ",
+		"SoccerPenaltyKick": "Sút 11m bóng đá",
+		"Soccer0to15Min": "0-15 phút bóng đá",
+		"Soccer15to30Min": "15-30 phút bóng đá",
+		"Soccer30to45Min": "30-45 phút bóng đá",
+		"Soccer45to60Min": "45-60 phút bóng đá",
+		"Soccer60to75Min": "60-75 phút bóng đá",
+		"Soccer75to90Min": "75-90 phút bóng đá",
+		"SoccerExtraFullTime": "Toàn trận bóng đá phụ",
+		"SoccerFullTimeInclET": "Toàn trận bóng đá (kể cả phụ)",
+		"SoccerPenaltyKickFirst5Rounds": "Sút 11m (5 vòng đầu) bóng đá"
+	},
+	"matchPeriod": {
+		"soccerNotStarted": "比赛未开始",
+		"soccerFirstHalf": "上半场",
+		"soccerHalfTime": "半场",
+		"soccerSecondHalf": "下半场",
+		"soccerFTFinish": "常规时间结束",
+		"soccerETFirstHalf": "ET(加时赛)上半场",
+		"soccerETHalfTime": "ET(加时赛)半场时间",
+		"soccerETSecondHalf": "ET(加时赛)-后半场",
+		"soccerETFinish": "ET(加时赛)-结束",
+		"soccerPenalty": "点球大战",
+		"soccerFinish": "比赛结束",
+		"soccerAwaitingET": "等待加时",
+		"soccerAwaitingPenalty": "等待点球大战",
+		"soccerPenaltyFinish": "点球大战结束",
+		"soccerInterrupted": "中断",
+		"soccerAbandoned": "废弃"
+	}
+}

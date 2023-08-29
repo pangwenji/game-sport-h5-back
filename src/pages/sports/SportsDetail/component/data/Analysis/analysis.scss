@@ -1,0 +1,362 @@
+@mixin common() {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+
+    .text {
+        margin-left: 7px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+@mixin common_line() {
+    height: 40px;
+    width: 8px;
+}
+
+@mixin common_title() {
+    height: 80px;
+    width: 100%;
+    background: #ffffff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.analysis-main {
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .analysis-header {
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        border-radius: 30px;
+        padding-top: 12px;
+        margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .left {
+            flex: 1;
+            font-size: 26px;
+            font-weight: bold;
+
+            span {
+                width: 100%;
+                margin-left: 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        .right {
+            flex: 2;
+            display: flex;
+            align-items: center;
+
+            span {
+                color: #8A8A8D;
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                text-align: end;
+                font-size: 23px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        .bottom {
+            flex: 1;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 12px;
+
+            .box {
+                height: 70px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .left {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .goalDistribution {
+        @include common_title();
+    }
+
+    .e_chart {
+        height: 500px;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        padding: 25px;
+
+        .e_chart_box {
+            flex: 1;
+
+            .e_chart_content {
+                height: 100%;
+                width: 100%;
+                background: #f7f7f7;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .top {
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .title {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        span {
+                            font-size: 30px;
+
+                        }
+                    }
+
+                    .march {
+                        flex: 1;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        align-items: flex-start;
+                        justify-content: center;
+
+                        .march-text {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: white;
+                            font-size: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 5px;
+                        }
+                    }
+
+                }
+
+                .middle {
+                    flex: 4;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .core {
+                        width: 200px;
+                        height: 200px;
+                        // background: blue;
+                    }
+                }
+
+                .bottom {
+                    flex: 2;
+                    display: flex;
+
+                    .left {
+                        flex: 1;
+                        // background: red;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 28px;
+                            color: #8A8A8D;
+
+                        }
+
+                        .percent {
+                            font-size: 40px;
+                            color: #E20B0B;
+                            font-weight: bold;
+                            justify-content: flex-start;
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+                        display: flex;
+
+                        .right-box {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+
+                            span {
+                                flex: 1;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 25px;
+                            }
+
+                            .value {
+                                font-size: 30px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .team-row {
+        height: 80px;
+        height: 80px;
+        width: 100%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+
+        .left {
+            @include common();
+
+            .line {
+                @include common_line();
+                background: red;
+                margin-right: 7px;
+            }
+
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include common();
+            padding-right: 12px;
+
+            .line {
+                @include common_line();
+                background: blue;
+                margin-left: 7px;
+            }
+
+            .outs {
+                font-size: 30px;
+                color: #8A8A8D;
+            }
+        }
+
+    }
+
+    .match-item {
+        width: 100%;
+        background: #ffffff;
+        padding-left: 17px;
+        padding-right: 17px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-bottom: 12px;
+
+        .match-info {
+            height: 150px;
+            border-radius: 30px;
+            width: 100%;
+            background: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+
+            .top {
+                flex: 1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                position: relative;
+
+                span {
+                    font-size: 25px;
+                    color: #888888;
+                }
+
+                .status {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    width: 45px;
+                    height: 45px;
+                    background: #00a525;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #ffffff;
+                }
+            }
+
+            .bottom {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .box {
+                    flex: 4;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    span {
+                        font-size: 28px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+
+                }
+
+                .score {
+                    flex: 1;
+                    text-align: center;
+                    font-size: 45px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

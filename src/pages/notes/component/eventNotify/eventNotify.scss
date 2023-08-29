@@ -1,0 +1,29 @@
+.announcements {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .tip {
+        height: 23px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 23px;
+        height: 40px;
+    }
+
+
+
+    .tip-content {
+        width: 580px;
+        position: fixed;
+        right: 0;
+
+        .marquee-text {
+            color: red;
+        }
+    }
+
+}

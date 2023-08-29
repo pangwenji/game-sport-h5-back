@@ -1,0 +1,116 @@
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin common() {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+
+    .main-right {
+        flex: 1;
+        @include center();
+    }
+
+    .header-panels {
+        flex: 7;
+        background: rgb(0, 0, 0, 0.01);
+        @include center();
+        position: relative;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+        .text {
+            font-family: Montserrat;
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 32px;
+            overflow: hidden;
+            text-align: center;
+            color: #ffffff;
+            height: 74px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include center();
+        }
+
+        .right-dropdown {
+            background: rgb(0, 0, 0, 0);
+        }
+    }
+
+    .main-left {
+        flex: 1;
+        @include center();
+    }
+}
+
+#header {
+    width: 100%;
+
+    .header-active {
+        background: linear-gradient(180deg, #0c176d 0%, #1736a1 100%);
+        z-index: 99;
+        @include common();
+        display: flex;
+        height: 8%;
+
+        .march-score {
+            // background: orange;
+            flex: 7;
+            height: 100%;
+            display: flex;
+
+            .home-name {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                font-size: 25px;
+                font-weight: bold;
+
+                overflow: hidden; //超出的文本隐藏
+                text-overflow: ellipsis; //溢出用省略号显示
+                white-space: nowrap; //溢出不换行
+            }
+
+            .score {
+                flex: 1;
+                @include center();
+                color: #ffffff;
+                font-size: 35px;
+                font-weight: bold;
+
+            }
+        }
+    }
+
+    .header-cxt {
+        @include common();
+    }
+}
+
+.scroll-header {
+    height: 7px;
+    background: red;
+    width: 100%;
+    position: fixed;
+    top: 8%;
+    z-index: 99;
+
+    .process {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 25px;
+        width: 120px;
+        background: red;
+        border-radius: 20px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+    }
+}

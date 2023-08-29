@@ -1,0 +1,36 @@
+.list-unSettle {
+    .ann {
+        position: absolute;
+        top: 175px;
+        display: flex;
+        z-index: 99;
+    }
+
+    .list-panel {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        flex-grow: 1;
+    }
+
+    .WindowScrollerWrapper {
+        padding-top: 220px;
+        padding-bottom: 90px;
+        background: #f0f0f0;
+        flex: 1;
+
+        // height: auto;
+        width: 100%;
+
+        .rowList {
+            background: 'red';
+        }
+    }
+}
+
+.data-empty {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}

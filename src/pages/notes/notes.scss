@@ -1,0 +1,198 @@
+body {
+    background-color: #ffffff;
+
+}
+
+@mixin commonSpan {
+    width: 170px;
+    height: 65%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+@mixin common() {
+    background: linear-gradient(to bottom, #0c176d, #1736a1);
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@mixin titleLeft() {
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(to bottom, #0c176d, #1736a1);
+}
+
+@mixin commonListen() {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(to bottom, #0c176d, #1736a1);
+}
+
+.customer {
+    height: 350px;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+
+    div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        // border: 1px solid #f0f0f0;
+    }
+}
+
+
+
+
+
+.notes {
+    .top {
+
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .sport-header {
+            height: 90px;
+            background-color: #ffffff;
+            display: flex;
+            position: relative;
+
+            .settle-detail {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                right: 0;
+
+                .adm-dropdown-item-title {
+                    // height: 45px;
+                }
+            }
+
+            .box-item {
+                // flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+
+                .span-active {
+                    background: #2B44B1;
+                    @include commonSpan();
+                }
+
+                .span-inactive {
+                    @include commonSpan();
+                    background: #f0f0f0;
+                    color: #888888
+                }
+            }
+
+        }
+
+        .nav-bar-title {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+
+
+            .title-left {
+                @include titleLeft();
+                border-bottom-right-radius: 20px;
+            }
+
+            .title-left-normal {
+                @include titleLeft();
+
+            }
+
+            .active {
+                @include common();
+                border-color: #2B44B1;
+
+                span {
+                    background: #ffffff;
+                    height: 80%;
+                    width: 100%;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #2B44B1;
+                    font-size: 30px;
+                    font-weight: 500;
+                }
+            }
+
+            .inactive {
+                @include common();
+
+                border-bottom-left-radius: 20px;
+
+                span {
+                    background: linear-gradient(to bottom, #0c176d, #1736a1);
+                    height: 80%;
+                    width: 80%;
+                    color: #ffffff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    font-weight: 500;
+                    // border-bottom-left-radius: 20px;
+
+                }
+            }
+
+            .inactive_sports {
+                @include common();
+                border-bottom-right-radius: 20px;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    font-weight: 500;
+                    height: 80%;
+                    width: 80%;
+                    color: #ffffff;
+                }
+
+            }
+
+            .listen {
+                @include commonListen();
+                border-bottom-left-radius: 20px;
+            }
+
+            .inListen {
+                @include commonListen();
+            }
+        }
+    }
+}
+
+.settle_content {
+    display: flex;
+    background: red;
+    width: 100%;
+}

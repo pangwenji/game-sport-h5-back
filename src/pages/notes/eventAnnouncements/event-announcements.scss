@@ -1,0 +1,46 @@
+.event-announcements {
+    display: flex;
+    flex-direction: column;
+
+
+    .event-header {
+        background: linear-gradient(to bottom, #0c176d, #1736a1);
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #ffffff;
+        font-weight: bold;
+
+        .arrowLeft {
+            position: absolute;
+            left: 15px;
+        }
+
+        .right-customer {
+            position: absolute;
+            right: 15px;
+        }
+    }
+
+
+    .evens-content {
+        position: relative;
+
+        .title {
+            font-weight: bold;
+        }
+
+        .time {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .content {
+        font-size: 28px;
+        color: #8A8A8D;
+    }
+}
